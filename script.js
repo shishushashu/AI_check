@@ -7,10 +7,10 @@ butt.addEventListener("click", function funziona(){
     const casualità = Math.floor(Math.random() * 10)
     const casualità2 = Math.floor(Math.random() * 10)
    if(frase.some(p => accetati.includes(p) && casualità2 >=4 ) ) {
-    console.log("non so")
+    console.log("si")
     
    } else if(frase.some(l => riufiutati.includes(l))){
-    console.log("funziona")
+    console.log("no")
    } else{
         if(casualità <= 5){
             console.log('no')
