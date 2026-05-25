@@ -1,11 +1,25 @@
 const accetati = ['spiega', 'come','aiuto','aiutami', 'vuol dire', 'correggi', 'capire', 'capisco'];
+const riufiutati = ['crea', 'fai', 'metti']
 const butt = document.getElementById("aiuto");
 const scritta = document.getElementById("frase");
 butt.addEventListener("click", function funziona(){
     const frase = scritta.value.split(" ");
-   if(frase.some(p => accetati.includes(p))){
-    console.log("non so")
+    const casualità = Math.floor(Math.random() * 10)
+    const casualità2 = Math.floor(Math.random() * 10)
+   if(frase.some(p => accetati.includes(p) && casualità2 >=4 ) ) {
+    console.log("si")
+    
+   } else if(frase.some(l => riufiutati.includes(l))){
+    console.log("no")
+   } else{
+        if(casualità <= 5){
+            console.log('no')
+        }else{
+            console.log('si')
+        }
    }
-   console.log("funziona")
+   console.log(casualità)
+   console.log (casualità2)
+   
 })
     
